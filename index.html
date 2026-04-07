@@ -2,39 +2,101 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio</title>
+  <title>Web制作ポートフォリオ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Helvetica Neue", Arial, sans-serif;
       margin: 0;
-      line-height: 1.6;
+      line-height: 1.7;
+      background: #fafafa;
+      color: #333;
     }
+
+    /* ヘッダー */
     header {
-      padding: 40px;
-      background: #f5f5f5;
+      padding: 60px 20px;
+      background: #f0f0f0;
       text-align: center;
     }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    /* セクション */
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       max-width: 900px;
       margin: auto;
     }
+
+    /* 見出し */
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      border-left: 4px solid #333;
+      padding-left: 10px;
+    }
+
+    /* 作品一覧 */
     .works {
       display: grid;
-      gap: 20px;
+      gap: 30px;
     }
+
+    /* カード */
     .work {
-      border: 1px solid #ddd;
-      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: 0.3s;
     }
+
+    .work:hover {
+      transform: translateY(-5px);
+    }
+
+    /* タイトル */
+    .work h3 {
+      margin-top: 0;
+    }
+
+    /* ボタン */
     .btn {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
+      margin-top: 15px;
+      padding: 10px 18px;
       background: #333;
       color: #fff;
       text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #555;
+    }
+
+    /* スマホ対応 */
+    @media (max-width: 600px) {
+      header {
+        padding: 40px 15px;
+      }
+
+      section {
+        padding: 40px 15px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -61,30 +123,66 @@
 
     <!-- 作品① -->
     <div class="work">
-      <h3>○○サイト</h3>
-      <p>○○目的としたWebサイト</p>
+      <h3>スグ食べ（架空LP）</h3>
+      <p>オーガニック食品サービスの利用促進を目的としたランディングページ</p>
 
+      <p><strong>制作背景：</strong><br>
+      スクール課題として、ヒアリング内容をもとにLP制作を行いました。
+      既存サイトとは別に、リスティング広告用として訴求力の高いページ設計が求められました。</p>
+      
+      <p><strong>目的：</strong><br>
+      食にこだわりのあるユーザーに向けてサービスの魅力を伝え、
+      お試し購入へ導くこと</p>
+      
+      <p><strong>ターゲット：</strong><br>
+      食の安全や品質に関心が高く、「ていねいな暮らし」を大切にする層</p>
+      
       <p><strong>工夫した点：</strong><br>
-      テキストテキストテキストテキスト</p>
-
+      「新鮮さ・安心感・信頼感」が伝わるよう、ナチュラルで清潔感のあるデザインを意識しました。  
+      また、ファーストビューでサービスの特徴が伝わる構成とし、CTAボタンを目立つ位置に配置しました。  
+      スマートフォンでの閲覧を意識し、視認性や操作性にも配慮しています。</p>
+      
       <p><strong>改善案：</strong><br>
-      テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      ユーザーの購入判断を後押しするために、利用者の評価（★など）や具体的な利用シーンを追加することで信頼性向上が期待できると考えています。  
+      また、CTAの配置やデザインを検証・改善することで、コンバージョン率の向上につながる可能性があります。</p>
 
-      <a href="#" class="btn">サイトを見る</a>
+      <p><strong>使用技術：</strong><br>
+      HTML / CSS（レスポンシブ対応）</p>
+
+      <a class="btn" href="https://miki-wa.github.io/sugutabe-lp/">サイトを見る</a>
     </div>
 
     <!-- 作品② -->
     <div class="work">
-      <h3>LPデザイン</h3>
-      <p>○○目的としたランディングページ</p>
+      <h3>calmease（作品紹介サイト）</h3>
+      <p>ハンドメイド作品の魅力を伝えるための紹介サイト</p>
+
+      <p><strong>制作背景：</strong><br>
+      友人が制作したぬいぐるみ作品の魅力を、写真だけでは伝えきれないため、
+      世界観やコンセプトを丁寧に表現することを目的として制作しました。</p>
+
+      <p><strong>目的：</strong><br>
+      作品の世界観やコンセプトを伝え、ECサイトやイベントへの導線を作ること</p>
+
+      <p><strong>ターゲット：</strong><br>
+      ハンドメイド作品やぬいぐるみに興味があり、
+      日常の中で癒しやこだわりを大切にする20代以上の層</p>
 
       <p><strong>工夫した点：</strong><br>
-      テキストテキストテキストテキス</p>
+      作品コンセプトである「落ち着き」や「安心感」を表現するため、
+      落ち着いた配色と余白を意識したデザインとしました。  
+      また、作品を生活に取り入れた際のイメージが伝わるよう、
+      視覚的に分かりやすい構成を心がけています。</p>
 
       <p><strong>改善案：</strong><br>
-      テキストテキストテキストテキステキストテキストテキストテキス</p>
+      作品数が増えた際に備え、カテゴリ分けや検索機能を追加することで、
+      ユーザーが目的の作品にアクセスしやすくなると考えています。  
+      また、ECサイトへの導線をより明確にすることで、購入への遷移率向上が期待できます。</p>
 
-      <a href="#" class="btn">サイトを見る</a>
+      <p><strong>使用技術：</strong><br>
+      HTML / CSS（レスポンシブ対応）</p>
+
+      <a class="btn" href="https://miki-wa.github.io/calmease-site/">サイトを見る</a>
     </div>
 
   </div>
