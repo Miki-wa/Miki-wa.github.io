@@ -1,209 +1,173 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Web制作ポートフォリオ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      margin: 0;
-      line-height: 1.7;
-      background: #fafafa;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML/CSSを用いたWebサイト制作を中心に学習したポートフォリオサイトです。ユーザー目線を意識した使いやすいデザインと構成を心がけています。">
 
-    /* ヘッダー */
-    header {
-      padding: 60px 20px;
-      background: #f0f0f0;
-      text-align: center;
-    }
+    <title>Web制作ポートフォリオ</title>
 
-    header h1 {
-      margin-bottom: 10px;
-      font-size: 32px;
-    }
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
-    /* セクション */
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    /* 見出し */
-    h2 {
-      margin-bottom: 20px;
-      font-size: 24px;
-      border-left: 4px solid #333;
-      padding-left: 10px;
-    }
-
-    /* 作品一覧 */
-    .works {
-      display: grid;
-      gap: 30px;
-    }
-
-    /* カード */
-    .work {
-      background: #fff;
-      border-radius: 10px;
-      padding: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: 0.3s;
-    }
-
-    .work:hover {
-      transform: translateY(-5px);
-    }
-
-    /* タイトル */
-    .work h3 {
-      margin-top: 0;
-    }
-
-    /* ボタン */
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #333;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #555;
-    }
-
-    /* スマホ対応 */
-    @media (max-width: 600px) {
-      header {
-        padding: 40px 15px;
-      }
-
-      section {
-        padding: 40px 15px;
-      }
-
-      header h1 {
-        font-size: 24px;
-      }
-
-      h2 {
-        font-size: 20px;
-      }
-    }
-  </style>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/destyle.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
+    <!-- sidebar -->
+    <aside class="sidebar">
+        <h1 class="title"><a class="title-link" href="#top">Portfolio</a></h1>
+        <nav class="nav">
+            <a class="nav-list" href="#about">About</a>
+            <a class="nav-list" href="#works">Works</a>
+            <a class="nav-list" href="#goals">Goals</a>
+        </nav>
+    </aside>
+    
+    <main class="main">
+        <!-- FV -->
+        <section id="top" class="section section-fv">
+            <h2 class="section-title">Web制作ポートフォリオ</h2>
+            <p class="fv-txt">ユーザー目線で設計し、改善まで考えるWeb制作</p>
+            <p class="fv-skills">HTML / CSS / JavaScript<br>
+            Figma / Photoshop（Photopea）</p>
+        </section>
 
-<header>
-  <h1>Portfolio</h1>
-  <p>Web制作ポートフォリオ</p>
-</header>
+        <!-- About -->
+        <section id="about" class="section section-about">
+            <h2 class="section-title">About</h2>
+            <p class="about-txt">HTML/CSSを用いたWebサイト制作を中心に学習しました。<br>
+            ユーザー目線を意識し、使いやすさや見やすさを考えた制作を心がけています。<br>
+            また、目的やターゲットに合わせた構成設計にも取り組んでいます。</p>
+        </section>
 
-<section>
-  <h2>About</h2>
-  <p>HTML/CSSを用いたWebサイト制作を中心に学習しました。<br>
-  ユーザー目線を意識し、使いやすさや見やすさを考えた制作を心がけています。<br>
-  また、目的やターゲットに合わせた構成設計にも取り組んでいます。</p>
-</section>
+        <!-- Works -->
+        <section id="works" class="section section-works">
+            <h2 class="section-title">Works</h2>
+            <div class="works-contents">
 
-<section>
-  <h2>Skills</h2>
-  <p>HTML/CSS/JavaScript/Figma/Photoshop(Photopea)</p>
-</section>
-  
-<section>
-  <h2>Works</h2>
+                <!-- 作品1 -->
+                <div class="works-card">
+                    <div class="works-card-top">
+                        <p class="works-tmb"><img src="assets/images/sugutabe_tmb.png" alt="スグ食べのLPのサムネイル画像"></p>
+                        <h3 class="works-title">スグ食べ （架空LP）</h3>
+                        <p class="works-txt">オーガニック食品の魅力を伝え、<br>
+                        お試し購入へ導くことを目的としたLP</p>
+                        <p class="works-txt">制作期間：約3週間（12月上旬～12月下旬）<br>
+                        ワイヤー　1週間 / デザイン　1週間 / コーディング　1週間</p>
+                        <a class="works-btn" href="https://miki-wa.github.io/sugutabe-lp/" target="_blank" rel="noopener noreferrer">サイトを見る</a>
+                    </div>
 
-  <div class="works">
+                    <!-- SP -->
+                    <details class="works-point">
+                        <summary class="works-link">詳細を見る</summary>
+                        <hr class="works-card-hr">
+                        <div class="works-card-detail">
+                            <div class="works-reason">
+                                <h4 class="works-subtitle">制作背景</h4>
+                                <p class="works-txt">スクールの中間課題として、ヒアリング内容をもとにLP制作を行いました。<br>
+                                既存サイトとは別に、リスティング広告用として訴求力の高いページ設計が求められました。</p>
+                            </div>
+                            <div class="works-purpose">
+                                <h4 class="works-subtitle">目的</h4>
+                                <p class="works-txt">食にこだわりのあるユーザーに向けてサービスの魅力を伝え、 お試し購入へ導くこと</p>
+                            </div>
+                            <div class="works-target">
+                                <h4 class="works-subtitle">ターゲット</h4>
+                                <p class="works-txt">食の安全や品質に関心が高く、「ていねいな暮らし」を大切にする層</p>
+                            </div>
+                            <div class="works-devise">
+                                <h4 class="works-subtitle">工夫した点</h4>
+                                <ul class="works-txt">
+                                    <li class="works-txt">・「新鮮さ・安心感・信頼感」が伝わるよう、ナチュラルで清潔感のあるデザインを意識</li>
+                                    <li class="works-txt">・ファーストビューでサービスの特徴が伝わる構成とし、CTAボタンを目立つ位置に配置</li>
+                                    <li class="works-txt">・スマートフォンでの閲覧を意識し、視認性や操作性にも配慮</li>
+                                </ul>
+                            </div>
+                            <div class="works-improvement">
+                                <h4 class="works-subtitle">改善案</h4>
+                                <ul class="works-txt">
+                                    <li class="works-txt">・ユーザーの購入判断を後押しするための利用者の評価（★など）や具体的な利用シーンを追加<br>
+                                    　→ 信頼性向上が期待
+                                    </li>
+                                    <li class="works-txt">・CTAの配置やデザインを検証・改善<br>
+                                    　→ コンバージョン率の向上につながる可能性
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+                </div>
 
-    <!-- 作品① -->
-    <div class="work">
-      <h3>スグ食べ（架空LP）</h3>
-      <p>オーガニック食品サービスの利用促進を目的としたランディングページ</p>
+                <!-- 作品2 -->
+                <div class="works-card">
+                    <div class="works-card-top">
+                        <p class="works-tmb"><img src="assets/images/calmease_tmb.png" alt="calmeaseのWebサイトのサムネイル画像"></p>
+                        <h3 class="works-title">calmease（作品紹介サイト）</h3>
+                        <p class="works-txt">ハンドメイド作品の<br>
+                        魅力を伝えるための紹介サイト</p>
+                        <p class="works-txt">制作期間：約2ヶ月（12月下旬～2月下旬）<br>
+                        ワイヤー　2週間 / デザイン　4週間 / コーディング　2週間</p>
+                        <a class="works-btn" href="https://miki-wa.github.io/calmease-site/" target="_blank" rel="noopener noreferrer">サイトを見る</a>
+                    </div>
 
-      <p><strong>製作期間：</strong><br>
-      約3週間（12月上旬～12月下旬）ワイヤー　1週間 / デザイン　1週間 / コーディング　1週間</p>
+                    <!-- SP -->
+                    <details class="works-point">
+                        <summary class="works-link">詳細を見る</summary>
+                        <hr class="works-card-hr">
+                        <div class="works-card-detail">
+                            <div class="works-reason">
+                                <h4 class="works-subtitle">制作背景</h4>
+                                <p class="works-txt">卒業制作課題として友人が制作したぬいぐるみ作品の魅力を、写真だけでは伝えきれないため、<br>
+                                世界観やコンセプトを丁寧に表現することを目的として制作しました。</p>
+                            </div>
+                            <div class="works-purpose">
+                                <h4 class="works-subtitle">目的</h4>
+                                <p class="works-txt">作品の世界観やコンセプトを伝え、ECサイトやイベントへの導線を作ること</p>
+                            </div>
+                            <div class="works-target">
+                                <h4 class="works-subtitle">ターゲット</h4>
+                                <p class="works-txt">ハンドメイド作品やぬいぐるみに興味があり、 日常の中で癒しやこだわりを大切にする20代以上の層</p>
+                            </div>
+                            <div class="works-devise">
+                                <h4 class="works-subtitle">工夫した点</h4>
+                                <ul class="works-txt">
+                                    <li class="works-txt">・作品コンセプトである「落ち着き」や「安心感」を表現するため、 落ち着いた配色と余白を意識</li>
+                                    <li class="works-txt">・作品を生活に取り入れた際のイメージが伝わるよう、 視覚的に分かりやすい構成</li>
+                                </ul>
+                            </div>
+                            <div class="works-improvement">
+                                <h4 class="works-subtitle">改善案</h4>
+                                <ul class="works-txt">
+                                    <li class="works-txt">・作品数が増えた際に備え、カテゴリ分けや検索機能を追加<br>
+                                    　→  ユーザーが目的の作品にアクセスしやすくなる可能性                                        
+                                    </li>
+                                    <li class="works-txt">・ECサイトへの導線をより明確にする<br>
+                                    　→ 購入への遷移率向上の期待
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
 
-      <p><strong>制作背景：</strong><br>
-      スクールの中間課題として、ヒアリング内容をもとにLP制作を行いました。 
-      既存サイトとは別に、リスティング広告用として訴求力の高いページ設計が求められました。</p>
-      
-      <p><strong>目的：</strong><br>
-      食にこだわりのあるユーザーに向けてサービスの魅力を伝え、お試し購入へ導くこと</p>
-      
-      <p><strong>ターゲット：</strong><br>
-      食の安全や品質に関心が高く、「ていねいな暮らし」を大切にする層</p>
-      
-      <p><strong>工夫した点：</strong><br>
-      ・「新鮮さ・安心感・信頼感」が伝わるよう、ナチュラルで清潔感のあるデザインを意識<br>
-      ・ファーストビューでサービスの特徴が伝わる構成とし、CTAボタンを目立つ位置に配置<br>
-      ・スマートフォンでの閲覧を意識し、視認性や操作性にも配慮</p>
-      
-      <p><strong>改善案：</strong><br>
-      ・ユーザーの購入判断を後押しするための利用者の評価（★など）や具体的な利用シーンを追加<br>
-        → 信頼性向上が期待<br>
-      ・CTAの配置やデザインを検証・改善<br>
-        → コンバージョン率の向上につながる可能性</p>
+        <!-- Goals -->
+        <section id="goals" class="section section-goals">
+            <h2 class="section-title">Goals</h2>
+            <p class="goals-txt">Node.js/Expressを用いて、Webサイトの更新・運用に活かせる技術を習得し、<br>
+            ユーザー行動を踏まえた改善提案や機能実装まで対応できるよう取り組んでいきます。</p>
+            <p class="goals-txt">また、JavaScriptを用いた動的なWebサイト制作への理解を深め、<br>
+            ユーザー体験の向上や使いやすさの改善に活かしていきたいと考えています。</p>
+        </section>
+    </main>
 
-      <a class="btn" href="https://miki-wa.github.io/sugutabe-lp/">サイトを見る</a>
-    </div>
-
-    <!-- 作品② -->
-    <div class="work">
-      <h3>calmease（作品紹介サイト）</h3>
-      <p>ハンドメイド作品の魅力を伝えるための紹介サイト</p>
-
-      <p><strong>製作期間：</strong><br>
-      約2ヶ月（12月下旬～2月下旬）ワイヤー　2週間 / デザイン　4週間 / コーディング　2週間</p>
-
-      <p><strong>制作背景：</strong><br>
-      卒業制作課題として友人が制作したぬいぐるみ作品の魅力を、写真だけでは伝えきれないため、
-      世界観やコンセプトを丁寧に表現することを目的として制作しました。</p>
-
-      <p><strong>目的：</strong><br>
-      作品の世界観やコンセプトを伝え、ECサイトやイベントへの導線を作ること</p>
-
-      <p><strong>ターゲット：</strong><br>
-      ハンドメイド作品やぬいぐるみに興味があり、
-      日常の中で癒しやこだわりを大切にする20代以上の層</p>
-
-      <p><strong>工夫した点：</strong><br>
-      ・作品コンセプトである「落ち着き」や「安心感」を表現するため、 落ち着いた配色と余白を意識<br>
-      ・作品を生活に取り入れた際のイメージが伝わるよう、 視覚的に分かりやすい構成</p>
-
-      <p><strong>改善案：</strong><br>
-      ・作品数が増えた際に備え、カテゴリ分けや検索機能を追加<br>
-        → ユーザーが目的の作品にアクセスしやすくなる可能性<br>
-      ・ECサイトへの導線をより明確にする<br>
-        → 購入への遷移率向上の期待</p>
-
-      <a class="btn" href="https://miki-wa.github.io/calmease-site/">サイトを見る</a>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <h2>Goals</h2>
-  <p>
-    Node.js/Expressを用いて、Webサイトの更新・運用に活かせる技術を習得し、<br>
-    ユーザー行動を踏まえた改善提案や機能実装まで対応できるよう取り組んでいきます。
-  </p>
-
-  <p>
-    また、JavaScriptを用いた動的なWebサイト制作への理解を深め、<br>
-    ユーザー体験の向上や使いやすさの改善に活かしていきたいと考えています。
-  </p>
-</section>
-
+    <footer class="footer">
+        <p class="copy"><small>&copy; 2026 Portfolio</small></p>
+    </footer>
 </body>
 </html>
