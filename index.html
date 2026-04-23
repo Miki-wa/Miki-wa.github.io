@@ -19,12 +19,21 @@
 <body>
     <!-- sidebar -->
     <aside class="sidebar">
-        <h1 class="title"><a class="title-link" href="#top">Portfolio</a></h1>
-        <nav class="nav">
-            <a class="nav-list" href="#about">About</a>
-            <a class="nav-list" href="#works">Works</a>
-            <a class="nav-list" href="#goals">Goals</a>
-        </nav>
+        <div class="sidebar-inner">
+            <h1 class="title"><a class="title-link" href="#top">Portfolio</a></h1>
+            <nav class="nav">
+                <a class="nav-list" href="#about">About</a>
+                <a class="nav-list" href="#works">Works</a>
+                <a class="nav-list" href="#goals">Goals</a>
+            </nav>
+        </div>
+
+        <!-- menu-toggle -->
+        <div id="menu" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </aside>
     
     <main class="main">
@@ -71,21 +80,21 @@
                     <details class="works-point">
                         <summary class="works-link">詳細を見る</summary>
                         <hr class="works-card-hr">
-                        <div class="works-card-detail">
-                            <div class="works-reason">
+                        <div class="works-detail">
+                            <div class="works-detail-item">
                                 <h4 class="works-subtitle">制作背景</h4>
                                 <p class="works-txt">スクールの中間課題として、ヒアリング内容をもとにLP制作を行いました。<br>
                                 既存サイトとは別に、リスティング広告用として訴求力の高いページ設計が求められました。</p>
                             </div>
-                            <div class="works-purpose">
+                            <div class="works-detail-item">
                                 <h4 class="works-subtitle">目的</h4>
                                 <p class="works-txt">食にこだわりのあるユーザーに向けてサービスの魅力を伝え、 お試し購入へ導くこと</p>
                             </div>
-                            <div class="works-target">
+                            <div class="works-detail-item">
                                 <h4 class="works-subtitle">ターゲット</h4>
                                 <p class="works-txt">食の安全や品質に関心が高く、「ていねいな暮らし」を大切にする層</p>
                             </div>
-                            <div class="works-devise">
+                            <div class="works-detail-item">
                                 <h4 class="works-subtitle">工夫した点</h4>
                                 <ul class="works-txt">
                                     <li class="works-txt">・「新鮮さ・安心感・信頼感」が伝わるよう、ナチュラルで清潔感のあるデザインを意識</li>
@@ -93,7 +102,7 @@
                                     <li class="works-txt">・スマートフォンでの閲覧を意識し、視認性や操作性にも配慮</li>
                                 </ul>
                             </div>
-                            <div class="works-improvement">
+                            <div class="works-detail-item">
                                 <h4 class="works-subtitle">改善案</h4>
                                 <ul class="works-txt">
                                     <li class="works-txt">・ユーザーの購入判断を後押しするための利用者の評価（★など）や具体的な利用シーンを追加<br>
@@ -128,28 +137,28 @@
                     <details class="works-point">
                         <summary class="works-link">詳細を見る</summary>
                         <hr class="works-card-hr">
-                        <div class="works-card-detail">
-                            <div class="works-reason">
+                        <div class="works-detail">
+                            <div class="works-detail-item">
                                 <h4 class="works-subtitle">制作背景</h4>
                                 <p class="works-txt">卒業制作課題として友人が制作したぬいぐるみ作品の魅力を、写真だけでは伝えきれないため、<br>
                                 世界観やコンセプトを丁寧に表現することを目的として制作しました。</p>
                             </div>
-                            <div class="works-purpose">
+                            <div class="works-detail-item">
                                 <h4 class="works-subtitle">目的</h4>
                                 <p class="works-txt">作品の世界観やコンセプトを伝え、ECサイトやイベントへの導線を作ること</p>
                             </div>
-                            <div class="works-target">
+                            <div class="works-detail-item">
                                 <h4 class="works-subtitle">ターゲット</h4>
                                 <p class="works-txt">ハンドメイド作品やぬいぐるみに興味があり、 日常の中で癒しやこだわりを大切にする20代以上の層</p>
                             </div>
-                            <div class="works-devise">
+                            <div class="works-detail-item">
                                 <h4 class="works-subtitle">工夫した点</h4>
                                 <ul class="works-txt">
                                     <li class="works-txt">・作品コンセプトである「落ち着き」や「安心感」を表現するため、 落ち着いた配色と余白を意識</li>
                                     <li class="works-txt">・作品を生活に取り入れた際のイメージが伝わるよう、 視覚的に分かりやすい構成</li>
                                 </ul>
                             </div>
-                            <div class="works-improvement">
+                            <div class="works-detail-item">
                                 <h4 class="works-subtitle">改善案</h4>
                                 <ul class="works-txt">
                                     <li class="works-txt">・作品数が増えた際に備え、カテゴリ分けや検索機能を追加<br>
@@ -179,5 +188,7 @@
     <footer class="footer">
         <p class="copy"><small>&copy; 2026 Portfolio</small></p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
